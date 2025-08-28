@@ -143,4 +143,5 @@ Los números de punto fijo tienen una posición fija del punto decimal/binario, 
   `1100 0110 1111 1001 0000 0010 0000 0000`
 - Si se pide pasaje a Octal se debe usar potencias de a 4 **DE DERECHA A IZQUIERDA (atras para adelante)**
   - Octal → 30676201000₈
+
 ![alt text](image-5.png)
