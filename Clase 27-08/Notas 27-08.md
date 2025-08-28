@@ -105,3 +105,42 @@ Los números de punto fijo tienen una posición fija del punto decimal/binario, 
 ![alt text](image-2.png)
 
 # CLASE
+### Ejercicio de Parcial
+![alt text](image-3.png)
+
+### a)
+#### A = 250233 ₈ → Binario → Hexa → Deci
+- Binario (cada dígito octal → 3 bits): 2 5 0 2 3 3 → 010 101 000 010 011 011
+- Hexadecimal (agrupando en 4 bits): 0001 0101 0000 1001 1011 = **0**1509B (se agrega el cero)
+- Es el número = -1509 (Termina en B → negativo)
+
+#### B = 53687₁₀ → Hexa → Binario → Hexa → Deci
+- Realizar divisiones sucesivas 53687 / 16 y el resto con 53687 % 16. Se suma el resto hasta obtener un número = D1B7
+  - D = 13, 1 = 1, B = 11, 7 = 7
+  - 1101 0001 1011 0111 (Como el primer bit es  1, es negativo y tenemos que hacer **NOT+1**)
+  - 0010 1110 0100 1000 +1
+- Pasamos a Hexadecimal → 2E49 (2+14+4+9)
+- Pasamos a Decimal: 2x16³+14x16²+4x16¹+9x16⁰ = 11489
+- Número final es -11489 (por lo que definimos en la transformación binaria)
+
+### b)
+#### P = 20024₁₀ → Hexa → Binario
+- Hexadecimal por divisiones sucesivas = 4E38
+- Binario queda = 0100 1110 0011 1000
+- Queremos realizar las resta B-P en binario pero recordemos que P es el que resta, por ende:
+  - P NOT+1: 1011 0001 1100 1000
+###### B + P<sub>Complemento</sub>
+##### 1000 0011 0111 1111 
+- Sabiamos que el resultado debia ser -31873 por lo que podemos validar con la calculadora (Recordar el NOT+1)
+![alt text](image-4.png)✅
+
+### c)
+##### 1000 0011 0111 1111 NOT+1
+- Corremos la coma al primer dígito valido por lo que: 01,11 1100 1000 0001
+- **Se movió 14 lugares**
+- Número final es: 11000110111110010000001000000000
+  - Para verificar si fue correcto se debe poder agrupar de a 4:
+  `1100 0110 1111 1001 0000 0010 0000 0000`
+- Si se pide pasaje a Octal se debe usar potencias de a 4 **DE DERECHA A IZQUIERDA (atras para adelante)**
+  - Octal → 30676201000₈
+![alt text](image-5.png)
